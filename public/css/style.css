@@ -1,0 +1,230 @@
+/* Overall Page Styles */
+body {
+    background-color: #FFFFEE; /* Light yellowish-beige */
+    color: #333333; /* Dark grey text */
+    font-family: 'MS PGothic', 'Osaka', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+    line-height: 1.5; /* Slightly reduced for denser text */
+    margin: 0;
+    padding: 5px; /* Small padding around the page */
+}
+
+a {
+    color: #0000EE; /* Standard link blue */
+    text-decoration: none;
+}
+
+a:visited {
+    color: #551A8B; /* Standard visited link purple/blue */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header/Navigation - kept simple */
+header {
+    background: #EFEFEF; /* Light grey, similar to 2ch headers */
+    padding: 5px 10px;
+    border-bottom: 1px solid #CCCCCC;
+    text-align: left; /* 2ch headers are often left-aligned */
+}
+
+header h1 {
+    font-size: 1.2em; /* Smaller header text */
+    margin: 0;
+    color: #333333;
+}
+header h1 a { color: #333333; }
+
+
+main {
+    padding: 10px;
+    background: #FFFFEE; /* Same as body, or slightly different like #FFFCE0 */
+    max-width: 90%; /* Wider layout */
+    margin: 10px auto;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #CCCCCC; /* Standard HR color */
+    margin: 10px 0;
+}
+
+/* Thread List (index.php) */
+#thread-list h2 {
+    font-size: 1.1em;
+    border-bottom: 1px solid #CCCCCC;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+#thread-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+#thread-list li {
+    padding: 3px 0; /* Tighter spacing */
+    border-bottom: 1px dotted #CCCCCC; /* Dotted separator */
+}
+
+#thread-list li:last-child {
+    border-bottom: none;
+}
+
+#thread-list li a {
+    font-size: 0.95em;
+}
+
+/* Thread View (thread.php) */
+.thread-title-container { /* New class needed in thread.php */
+    border: 1px solid #CCCCCC;
+    background-color: #F0F0F0; /* Light grey background for title */
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.thread-title-container h1 {
+    font-size: 1.3em; /* Larger font for thread title */
+    margin: 0;
+    color: #CC0000; /* Reddish title, common on some boards */
+}
+
+.post {
+    border: 1px solid #CCCCCC;
+    background-color: #FFFFFF; /* White background for posts */
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+.post-header { /* New class needed in thread.php */
+    font-size: 0.85em; /* Smaller font for metadata */
+    color: #333333; /* Dark grey for metadata */
+    margin-bottom: 5px;
+    border-bottom: 1px solid #EFEFEF;
+    padding-bottom: 5px;
+}
+
+.post-number { /* New class needed in thread.php */
+    font-weight: bold;
+    color: #000000;
+}
+
+.post .author {
+    font-weight: bold;
+    color: #0000EE; /* Blue for author name */
+}
+
+.post .timestamp {
+    color: #888888; /* Lighter grey for timestamp */
+    margin-left: 5px;
+}
+
+.post-body {
+    font-family: 'Mona', 'IPAMonaPGothic', 'MS PGothic', monospace; /* Monospaced font for post body */
+    font-size: 0.95em; /* Standard post font size */
+    line-height: 1.4; /* Tighter line height for monospaced */
+    overflow-wrap: break-word; /* Prevent long strings from breaking layout */
+    word-wrap: break-word;
+}
+
+.post-body p {
+    margin: 5px 0;
+}
+
+.post-body .quote { /* Class for lines starting with > */
+    color: #008000; /* Green text for quotes */
+    margin-left: 10px; /* Slight indent for quotes */
+}
+
+.post-body img, .post-body a img {
+    max-width: 300px; /* Limit image size by default */
+    height: auto;
+    border: 1px solid #CCCCCC;
+    margin-top: 5px;
+    display: block; /* Ensure image is on its own line */
+}
+.post-body a {
+    color: #0000EE;
+}
+
+
+/* Forms (New Thread / Reply) */
+#new-thread-form, #reply-form {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #F0F0F0; /* Light grey background for forms */
+    border: 1px solid #CCCCCC;
+}
+
+#new-thread-form h2, #reply-form h3 {
+    font-size: 1.1em;
+    margin-top: 0;
+    border-bottom: 1px solid #CCCCCC;
+    padding-bottom: 5px;
+}
+
+#new-thread-form div, #reply-form div {
+    margin-bottom: 8px;
+}
+
+#new-thread-form label, #reply-form label {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 0.9em;
+    color: #333333;
+}
+
+#new-thread-form input[type="text"],
+#reply-form input[type="text"],
+#new-thread-form textarea,
+#reply-form textarea {
+    width: calc(100% - 16px); /* Adjust width to account for padding */
+    padding: 6px;
+    border: 1px solid #999999;
+    background-color: #FFFFFF;
+    font-family: 'MS PGothic', 'Osaka', monospace; /* Consistent font */
+    font-size: 0.95em;
+}
+
+#new-thread-form textarea,
+#reply-form textarea {
+    resize: vertical;
+    min-height: 70px;
+}
+
+button[type="submit"] {
+    background: #EFEFEF;
+    color: #333333;
+    padding: 5px 12px;
+    border: 1px solid #999999;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-family: 'MS PGothic', 'Osaka', sans-serif;
+}
+
+button[type="submit"]:hover {
+    background: #DDDDDD;
+    border-color: #666666;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 1px solid #CCCCCC;
+    font-size: 0.8em;
+    color: #555555;
+}
+
+/* Utility for error messages */
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid red;
+    background-color: #FFEEEE;
+}
